@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats Invaders</title> <!-- PAGE TITLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <div class="top-header content">
+
+        <div class="site-title">
+            <a href="../index.html"><h1>Giulia Fanzaghi</h1></a>
+            <h4>Game Programmer</h4>
+        </div>
+
+        <div class="navbar">
+            <a href="../index.html"><h3>Games</h3></a>
+            <a href="#"><h3>About</h3></a>
+            <a href="#"><h3>Contact</h3></a>
+        </div>
+
+    </div>
+
+    <!-- PAGE CONTENT -->
+    <div class="page-content content">
+
+        <h1>Cats Invaders</h1>
+
+        <section class="paragraph-with-image">
+            <video autoplay loop muted>
+                <source src="../images/cats-invaders-video.mp4" type="video/mp4">
+                Your browser does not support the video tag! Sorry!
+            </video>
+
+            <div>
+                <!-- game-description -->
+                <p>A menacing flock of cats is invading the planet! (Probably looking for food, since they haven&#8217;t eaten for a couple of hours.) You can choose among 12 valiant warriors and 14 lethal weapons (mostly fruits and vegetables, but still dreaded by cats) to fight these feisty felines and save the world. It&#8217;s meow or never!</p>
+                <p>(Fun fact: a group of cats is actually called a <em>clowder</em>. Flock sounds funnier though.)</p>
+                <p>A catty version of the classic 1978 arcade game Space Invaders (スペースインベーダー) featuring infinitely scrolling cats, it&#8217;s made with L&#214;VE and purr-fect for every cat lover.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="highlight-box">
+                <p><em>Cats Invaders</em> is a personal project and the first full game I built, inspired by <a href="https://cs50.harvard.edu/games/2018/" target="_blank">CS50&#8217;s Introduction to Game Development</a>. This is where I first learned about delta time, finite state machines, collision detection (using Axis-Aligned Bounding Boxes), particle systems, and more.</p>
+                <p>I programmed everything from scratch and was also the sole responsible for the game design (that&#8217;s why it&#8217;s not particularly fun to play.)</p>
+                <p>Made with <a href="https://love2d.org/" target="_blank">L&#214;VE</a> and Lua</p>
+            </div>
+        </section>
+
+        <section class="paragraph-with-image">
+            <div>
+                <h3>Notable features</h3>
+                <ul>
+                    <li>The invaders (the cats) shoot various stuff at the player&#8217;s character, while the player can move horizontally and shoot daikons at them</li>
+                    <li>Unlike the traditional finite grid of invaders that have to be defeated in order for the next grid to appear, this version features an infinite scrolling army of cats. Their speed and shooting frequency increase progressively as the game advances</li>
+                    <li>The player can choose among different characters and weapons</li>
+                    <li>High scores and player preferences are saved in local storage</li>
+                    <li>Multiple languages are supported</li>
+                </ul>
+            </div>
+
+            <img class="small-image" src="../images/cats-invaders-01.png" alt="Cats Invaders character selection">
+        </section>
+
+        <section>
+            <h3>Download <em>Cats Invaders</em> for free for both macOS and Windows from Itch.io <a href="https://giuliafanzaghi.itch.io/cats-invaders" target="_blank">here</a></h3>
+        </section>
+
+        <section>
+            <img class="large-image" src="../images/cats-invaders-02.png" alt="Cats Invaders main menu">
+        </section>
+
+    </div>
+    <!-- END PAGE CONTENT -->
+
+    <div class="bottom-navbar navbar content">
+        <a href="../index.html"><h3>Games</h3></a>
+        <a href="#"><h3>About</h3></a>
+        <a href="#"><h3>Contact</h3></a>
+    </div>
+
+    <footer class="content">
+        <p>And yes I also coded this small website from scratch because why not</p>
+    </footer>
+
+</body>
+</html>

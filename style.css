@@ -64,7 +64,7 @@ img {
 }
 
 #current-page {
-    border-bottom: 1px solid var(--text-color);
+    border-bottom: 2px solid var(--accent-color);
 }
 
 
@@ -141,8 +141,8 @@ footer {
 .page-content p, .page-content li {
     line-height: 1.4;
 }
-.page-content p + p, .page-content p + ul, .page-content ul + p {
-    margin: 1rem 0;
+.page-content p + p, .page-content p + ul, .page-content ul + p, .page-content li + li {
+    margin-top: 1rem;
 }
 
 .page-content ul {
