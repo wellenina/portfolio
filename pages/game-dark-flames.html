@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Flames</title> <!-- PAGE TITLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <div class="top-header content">
+
+        <div class="site-title">
+            <a href="../index.html"><h1>Giulia Fanzaghi</h1></a>
+            <h4>Game Programmer</h4>
+        </div>
+
+        <div class="navbar">
+            <a href="../index.html"><h3>Games</h3></a>
+            <a href="#"><h3>About</h3></a>
+            <a href="#"><h3>Contact</h3></a>
+        </div>
+
+    </div>
+
+    <!-- PAGE CONTENT -->
+    <div class="page-content content">
+
+        <h1>Dark Flames</h1>
+
+        <section class="paragraph-with-image">
+            <img class="small-image" src="../images/dark-flames-01.png" alt="Dark Flames">
+
+            <div>
+                <p class="game-description">Darkness has conquered everything. You must venture into the depths of the Forest of Sorrow in search of Cinders - the last fragments of the Primordial Flame, and your only hope to rekindle the light and restore warmth to a dying world.</p>
+                <p class="game-description">The path ahead is ever unknown. You will risk both body and mind. With you, only a faint torch. A roll of the dice will determine your fate.</p>
+
+                <div class="highlight-box">
+                    <p><em>Dark Flames</em> is a simple game developed in seven days for the <a href="https://itch.io/jam/1-bit-jam-wow" target="_blank">1-BIT JAM 2023 on itch.io</a> and released on itch.io as a <a href="https://giuliafanzaghi.itch.io/dark-flames" target="_blank">free play in browser game</a>.</p>
+                    <p>Made with Unity and C#.<br>I coded everything except the shader (that looks very cool, I know.)</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="paragraph-with-image">
+            <div>
+                <h3>Notable features</h3>
+                <ul>
+                    <li>Use of Scriptable Objects for data management</li>
+                    <li>At the start of each run, a unique hero is randomly generated with a name and stats</li>
+                    <li>Every step along the way is a &#8220;room&#8221; that gets instantiated as the characters goes forward, and every run is a pseudorandom sequence of rooms</li>
+                </ul>
+            </div>
+
+            <video autoplay loop muted>
+                <source src="../images/dark-flames-video.mov" type="video/mov">
+                <source src="../images/dark-flames-video.mp4" type="video/mp4">
+                Your browser does not support the video tag! Sorry!
+            </video>
+        </section>
+
+        <section class="paragraph-with-image">
+            <video autoplay loop muted>
+                <source src="../images/dark-flames-dice.mov" type="video/mov">
+                <source src="../images/dark-flames-dice.mp4" type="video/mp4">
+                Your browser does not support the video tag! Sorry!
+            </video>
+
+            <div>
+                <h3>One thing I&#8217;m pretty proud of</h3>
+                <p class="highlight-paragraph">I programmed a dice roll mechanic, with its 2D animation. The dice determines outcomes such as damage, resources, or special events.<br>It&#8217;s actually just a 2D image of the dice faces, masked, and smoothly scrolled until it reaches the desired face, previously calculated.</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>Play Dark Flames in browser <a href="https://giuliafanzaghi.itch.io/dark-flames" target="_blank">here</a></h3>
+        </section>
+
+        <section>
+            <img class="large-image" src="../images/dark-flames-02.png" alt="Dark Flames">
+        </section>
+
+    </div>
+    <!-- END PAGE CONTENT -->
+
+    <div class="bottom-navbar navbar content">
+        <a href="../index.html"><h3>Games</h3></a>
+        <a href="#"><h3>About</h3></a>
+        <a href="#"><h3>Contact</h3></a>
+    </div>
+
+    <footer class="content">
+        <p>And yes I also coded this small website from scratch because why not</p>
+    </footer>
+
+</body>
+</html>
