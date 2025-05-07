@@ -8,48 +8,103 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="icon" type="image/x-icon" href="favicon.png"> -->
 </head>
 <body>
 
-    <div class="top-header content">
+    <!-- HEADER -->
+    <div class="header content">
 
-        <div class="site-title">
-            <a href="#"><h1>Giulia Fanzaghi</h1></a>
+        <div class="header-text">
+            <a href="#top"><h1>Giulia Fanzaghi</h1></a>
             <h4>Game Programmer</h4>
         </div>
 
-        <div class="navbar">
-            <a href="#"><h3 id="current-page">Games</h3></a>
-            <a href="#"><h3>About</h3></a>
-            <a href="#"><h3>Contact</h3></a>
-        </div>
+        <nav>
+            <ul class="navbar">
+                <li><a href="#games" class="nav-link games-link">Games</a></li>
+                <li><a href="#about" class="nav-link about-link">About</a></li>
+                <li><a href="#contact" class="nav-link contact-link">Contact</a></li>
+            </ul>
+        </nav>
 
     </div>
 
-    <div class="portfolio-grid content">
+    <div class="content">
+        <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu dolor velit. Proin quis libero lobortis, dictum risus eu, sollicitudin mi</p>
+    </div>
 
-        <a class="grid-item" href="#">
-            <img class="grid-image" src="images/" alt="Nome">
-            <h2 class="grid-title">Nome Gioco</h2>
-        </a>
+    <!-- games -->
+    <div class="portfolio-grid content" id="games">
 
-        <a class="grid-item" href="#">
-            <img class="grid-image" src="images/" alt="Nome">
+        <!-- <a class="grid-item" href="pages/game-abyss-cleanup.html">
+            <img class="grid-image" src="images/abyss-cleanup.png" alt="Abyss CleanUp">
+            <h2 class="grid-title">Abyss CleanUp</h2>
+            <div>
+                <span class="keyword one">Unity</span>
+                <span class="keyword two">C#</span>
+                <span class="keyword three">Lead programmer</span>
+                <span class="keyword four">Mobile</span>
+            </div>
+        </a> -->
+
+        <a class="grid-item" href="pages/game-lost-colors.html">
+            <img class="grid-image" src="images/lost-colors.png" alt="Lost Colors">
             <h2 class="grid-title">Lost Colors</h2>
+            <div>
+                <span class="keyword one">Unreal Engine</span>
+                <span class="keyword two">C++</span>
+                <span class="keyword three">Gameplay & Tool programming</span>
+            </div>
         </a>
 
         <a class="grid-item" href="pages/game-dark-flames.html">
             <img class="grid-image" src="images/dark-flames.png" alt="Dark Flames">
             <h2 class="grid-title">Dark Flames</h2>
+            <div>
+                <span class="keyword one">Unity</span>
+                <span class="keyword two">C#</span>
+                <span class="keyword four">Game jam</span>
+            </div>
         </a>
 
         <a class="grid-item" href="pages/game-cats-invaders.html">
             <img class="grid-image" src="images/cats-invaders.png" alt="Cats Invaders">
             <h2 class="grid-title">Cats Invaders</h2>
+            <div>
+                <span class="keyword one">L&#214;VE</span>
+                <span class="keyword two">Lua</span>
+                <span class="keyword three">2D</span>
+                <span class="keyword four">Personal project</span>
+            </div>
         </a>
 
     </div>
 
+    <!-- about -->
+    <div id="about">
+        <div class="content">
+            <img src="images/giulia.jpg" alt="Giulia">
+            <div>
+                <p class="larger-text">Hello<p>
+                <!-- SOSTITUIRE IL TESTO, DUH -->
+                <p>Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development. Its purpose is to permit a page layout to be designed, independently of the copy that will subsequently populate it, or to demonstrate various fonts of a typeface without meaningful text that could be distracting. Lorem ipsum is typically a corrupted version of De finibus bonorum et malorum, a 1st-century BC text by the Roman statesman and philosopher Cicero, with words altered, added, and removed to make it nonsensical and improper Latin</p>
+                <a href="images/fanzaghi-giulia-resume.pdf" download target="_blank" class="download-button">Download my resume</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- contact -->
+    <div class="content" id="contact">
+        <p class="large-text">Let&#8217;s get in touch</p>
+        <a href="mailto:giulia.fanzaghi@gmail.com" target="_blank"><img src="images/icon-mail.png" alt="E-mail" class="contact-icon mail"></a>
+        <a href="https://github.com/wellenina" target="_blank"><img src="images/icons-github.png" alt="GitHub" class="contact-icon github"></a>
+        <!-- AGGIUNGERE LINK AL PROFILO LINKEDIN -->
+        <a href="#" target="_blank"><img src="images/icons-linkedin.png" alt="LinkedIn" class="contact-icon linkedin"></a>
+        <a href="https://discord.com/users/wellenina" target="_blank"><img src="images/icons-discord.png" alt="Discord" class="contact-icon discord"></a>
+    </div>
+
+    <!-- footer -->
     <footer class="content">
         <p>And yes I also coded this small website from scratch because why not</p>
     </footer>
