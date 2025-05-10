@@ -6,47 +6,55 @@
     <title>Dark Flames</title> <!-- PAGE TITLE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
+    <!-- <link rel="icon" type="image/x-icon" href="favicon.png"> -->
 </head>
 <body>
 
-    <div class="top-header content">
+    <!-- HEADER -->
+    <div class="header content">
 
-        <div class="site-title">
+        <div class="header-text">
             <a href="../index.html"><h1>Giulia Fanzaghi</h1></a>
             <h4>Game Programmer</h4>
         </div>
 
-        <div class="navbar">
-            <a href="../index.html"><h3>Games</h3></a>
-            <a href="#"><h3>About</h3></a>
-            <a href="#"><h3>Contact</h3></a>
-        </div>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../index.html#games" class="nav-link games-link">Games</a></li>
+                <li><a href="../index.html#about" class="nav-link about-link">About</a></li>
+                <li><a href="../index.html#contact" class="nav-link contact-link">Contact</a></li>
+            </ul>
+        </nav>
 
     </div>
+    <!-- fine header -->
+
 
     <!-- PAGE CONTENT -->
-    <div class="page-content content">
+    <div class="page">
 
-        <h1>Dark Flames</h1>
+        <section class="content">
+            <h1>Dark Flames</h1>
 
-        <section class="paragraph-with-image">
-            <img class="small-image" src="../images/dark-flames-01.png" alt="Dark Flames">
+            <div class="paragraph-with-image">
+                <img src="../images/dark-flames-01.png" alt="Dark Flames loading screen">
 
-            <div>
-                <p class="game-description">Darkness has conquered everything. You must venture into the depths of the Forest of Sorrow in search of Cinders - the last fragments of the Primordial Flame, and your only hope to rekindle the light and restore warmth to a dying world.</p>
-                <p class="game-description">The path ahead is ever unknown. You will risk both body and mind. With you, only a faint torch. A roll of the dice will determine your fate.</p>
-
-                <div class="highlight-box">
-                    <p><em>Dark Flames</em> is a simple game developed in seven days for the <a href="https://itch.io/jam/1-bit-jam-wow" target="_blank">1-BIT JAM 2023 on itch.io</a> and released on itch.io as a <a href="https://giuliafanzaghi.itch.io/dark-flames" target="_blank">free play in browser game</a>.</p>
-                    <p>Made with Unity and C#.<br>I coded everything except the shader (that looks very cool, I know.)</p>
+                <div>
+                    <p class="game-description">Darkness has conquered everything. You must venture into the depths of the Forest of Sorrow in search of Cinders - the last fragments of the Primordial Flame, and your only hope to rekindle the light and restore warmth to a dying world.</p>
+                    <p class="game-description">The path ahead is ever unknown. You will risk both body and mind. With you, only a faint torch. A roll of the dice will determine your fate.</p>
                 </div>
             </div>
-
         </section>
 
-        <section class="paragraph-with-image">
+        <section class="content highlight-box green">
+            <p><em>Dark Flames</em> is a simple game developed in seven days for the <a href="https://itch.io/jam/1-bit-jam-wow" target="_blank">1-BIT JAM 2023 on itch.io</a> and released on itch.io as a <a href="https://giuliafanzaghi.itch.io/dark-flames" target="_blank">free play in browser game</a>.</p>
+            <p>Made with Unity and C#.<br>I coded everything except the shader (that looks very cool, I know.)</p>
+            <p>Play <em>Dark Flames</em> <a href="https://giuliafanzaghi.itch.io/dark-flames" target="_blank">here</a></p>
+        </section>
+
+        <section class="paragraph-with-image content">
             <div>
                 <h3>Notable features</h3>
                 <ul>
@@ -62,34 +70,29 @@
             </video>
         </section>
 
-        <section class="paragraph-with-image">
-            <video autoplay loop muted>
-                <source src="../images/dark-flames-dice.mp4" type="video/mp4">
-                Your browser does not support the video tag! Sorry!
-            </video>
-
-            <div class="highlight-paragraph">
-                <h3>One thing I&#8217;m pretty proud of</h3>
-                <p>I programmed a dice roll mechanic, with its 2D animation. The dice determines outcomes such as damage, resources, or special events.</p>
-                <p>It&#8217;s actually just a 2D image of the dice faces, masked, and smoothly moved until it reaches the desired face, previously calculated. The image position had to be scaled based on the current resolution, otherwise the animation would break whenever the user resized the window.</p>
+        <section class="highlight-section purple">
+            <div class="paragraph-with-image content">
+                <video autoplay loop muted>
+                    <source src="../images/dark-flames-dice.mp4" type="video/mp4">
+                    Your browser does not support the video tag! Sorry!
+                </video>
+    
+                <div class="highlight-paragraph">
+                    <h3>One thing I&#8217;m pretty proud of</h3>
+                    <p>I programmed a dice roll mechanic, with its 2D animation. The dice determines outcomes such as damage, resources, or special events.</p>
+                    <p>It&#8217;s actually just a 2D image of the dice faces, masked, and smoothly moved until it reaches the desired face, previously calculated. The image position had to be scaled based on the current resolution, otherwise the animation would break whenever the user resized the window.</p>
+                </div>
             </div>
         </section>
 
-        <section>
-            <h3>Play <em>Dark Flames</em> <a href="https://giuliafanzaghi.itch.io/dark-flames" target="_blank">here</a></h3>
+        <section class="content">
+            <img src="../images/dark-flames-02.png" alt="Dark Flames">
         </section>
-
-        <section>
-            <img class="large-image" src="../images/dark-flames-02.png" alt="Dark Flames">
-        </section>
-
     </div>
     <!-- END PAGE CONTENT -->
 
-    <div class="bottom-navbar navbar content">
-        <a href="../index.html"><h3>Games</h3></a>
-        <a href="#"><h3>About</h3></a>
-        <a href="#"><h3>Contact</h3></a>
+    <div class="bottom-navbar content">
+        <a href="../index.html"><img src="../images/back-btn.png" alt="Back" class="back-btn yellow"></a>
     </div>
 
     <footer class="content">

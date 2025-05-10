@@ -4,15 +4,15 @@
     --pastel-magenta: #eecbff;
     --pastel-green: #d4ffea;
     --pastel-purple: #dbdcff;
-    --pastel-yellow: #feffa3;
-    --accent-color: hotpink; /* da togliere*/
+    --pastel-yellow: #FFFEDB;
+    --border-width: 2px;
+    --border-radius: 14px;
     --max-width: min(80%, 1000px);
     --max-width-large: min(90%, 1200px);
 }
 
 * {
     font-family: 'Lato', Helvetica, sans-serif;
-    font-weight: 400;
     color: var(--text-color);
     box-sizing: border-box;
     margin: 0;
@@ -25,19 +25,48 @@
     margin: 4rem auto;
 }
 
-a {
-    text-decoration: none;
-}
-
 p {
     line-height: 130%;
 }
 
+a {
+    text-decoration: none;
+}
+
 img {
     user-select: none;
+    -webkit-user-drag: none;
     width: 100%;
-    border: 2px solid var(--text-color);
-    border-radius: 20px;
+}
+img, video {
+    border: var(--border-width) solid var(--text-color);
+    border-radius: var(--border-radius)
+}
+
+
+/* colors */
+.magenta {
+    background-color: var(--pastel-magenta);
+}
+.green {
+    background-color: var(--pastel-green);
+}
+.purple {
+    background-color: var(--pastel-purple);
+}
+.yellow {
+    background-color: var(--pastel-yellow);
+}
+
+.highlight-section {
+    border-top: var(--border-width) solid var(--text-color);
+    border-bottom: var(--border-width) solid var(--text-color);
+}
+
+.highlight-box {
+    border: var(--border-width) solid var(--text-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
 }
 
 
@@ -48,17 +77,17 @@ img {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 1rem;
-    border-bottom: 2px solid var(--text-color);
+    border-bottom: var(--border-width) solid var(--text-color);
 }
 
 .header-text h1 {
     font-size: 1.8rem;
+    padding-bottom: .6rem;
 }
 
 .header-text h4 {
     font-weight: 300;
     font-style: italic;
-    padding-top: .6rem;
 }
 
 .navbar {
@@ -86,7 +115,7 @@ img {
     left: 0;
     right: 100%;
     height: 110%;
-    border-radius: 5px;
+    border-radius: 4px;
     transition: all 0.3s cubic-bezier(1, 0.68, 0.16, 0.9);
 }
 .nav-link:hover::after {
@@ -106,11 +135,12 @@ img {
 
 /* hero */
 .hero-text {
-    font-weight: 300;
-    text-align: center;
     max-width: 50%;
     margin: 0 auto;
+    font-weight: 300;
+    text-align: center;
 }
+
 
 /* grid - GAMES */
 
@@ -122,17 +152,13 @@ img {
 }
 
 .grid-item {
-    border: 2px solid var(--text-color);
-    border-radius: 20px;
+    border: var(--border-width) solid var(--text-color);
+    border-radius: var(--border-radius);
     padding: 1rem;
 }
 
-/* .grid-image:hover {
-    filter: brightness(1.1);
-} */
-
 .grid-title {
-    padding: .8rem 0;
+    padding: .8rem 0 .3rem;
 }
 
 .keyword + .keyword {
@@ -140,55 +166,49 @@ img {
 }
 
 .keyword {
+    display: inline-block;
     font-size: .8rem;
     text-transform: uppercase;
+    text-wrap: nowrap;
+    margin-top: 0.5rem;
     padding: .3rem .4rem;
     border-radius: 4px;
-}
-.keyword.one {
-    background-color: var(--pastel-magenta);
-}
-.keyword.two {
-    background-color: var(--pastel-green);
-}
-.keyword.three {
-    background-color: var(--pastel-purple);
-}
-.keyword.four {
-    background-color: var(--pastel-yellow);
 }
 
 
 /* about */
 
-#about {
-    background-color: var(--pastel-green);
-    border-top: 2px solid var(--text-color);
-    border-bottom: 2px solid var(--text-color);
-}
-
 #about .content {
     display: flex;
-    column-gap: 6rem;
+    column-gap: 4rem;
 }
 
 #about img {
     max-width: 30%;
+    height: 100%;
+    align-self: center;
 }
 
 .larger-text {
     font-size: 5rem;
-    margin-bottom: 1.4rem;
+    line-height: .8;
+    margin-bottom: 1.6rem;
+}
+
+#about p + p {
+    margin-top: .4rem;
 }
 
 .download-button {
     display: inline-block;
-    padding: 1rem 2rem;
-    margin-top: 2rem;
-    border: 2px solid var(--text-color);
-    border-radius: 20px;
+    margin-top: 1.8rem;
+    padding: .8rem 1.4rem;
+    border-radius: 10px;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    font-size: 0.9rem;
+    font-weight: 700;
 }
-
 
 /* contact */
 
@@ -202,23 +222,11 @@ img {
     font-size: 3.5rem;
 }
 
-.contact-icon {
+.contact-icon, .back-btn {
     width: auto;
     height: 3.5rem;
     padding: .2rem;
     border-radius: 50%;
-}
-.contact-icon.mail {
-    background-color: var(--pastel-magenta);
-}
-.contact-icon.github {
-    background-color: var(--pastel-green);
-}
-.contact-icon.linkedin {
-    background-color: var(--pastel-purple);
-}
-.contact-icon.discord {
-    background-color: var(--pastel-yellow);
 }
 
 
@@ -228,91 +236,71 @@ footer {
     font-size: 0.7rem;
     font-weight: 300;
     text-align: center;
-    border-top: 2px solid var(--text-color);
+    border-top: var(--border-width) solid var(--text-color);
     padding-top: 4rem;
 }
 
 
-
 /* page */
 
-.page-content section {
-    margin: 3rem 0;
-}
-
-.page-content .paragraph-with-image {
+.paragraph-with-image {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 4rem;
 }
 
-.paragraph-with-image img, .page-content video {
+.paragraph-with-image img, video {
     max-width: 56%;
 }
 
-.highlight-box {
-    padding: 1rem;
-    border: 5px solid var(--accent-color);
-    border-radius: 0.4rem;
+.page p + p, .page p + ul, .page ul + p, .page li + li {
+    margin-top: 1rem;
 }
 
-.highlight-paragraph {
-    padding-left: 1rem;
-    border-left: 5px solid var(--accent-color);
-    border-radius: 0.3rem;
-}
-
-.page-content h1 {
+.page h1 {
     font-size: 1.8rem;
     text-align: center;
+    margin-bottom: 3rem;
 }
 
-.page-content h3 {
+.page h3 {
     font-weight: 300;
     margin-bottom: 1rem;
 }
 
-
-.page-content p + p, .page-content p + ul, .page-content ul + p, .page-content li + li, .page-content p + .highlight-box {
-    margin-top: 1rem;
+.game-description {
+    font-weight: 300;
 }
 
-.page-content ul {
+.page a {
+    /* QUALCOSA */
+    color: inherit;
+}
+.page a:hover {
+    /* QUALCOSA */
+    color: inherit;
+}
+
+.page ul {
     list-style-position: inside;
 }
-
-.page-content li {
+.page li {
     list-style: none;
     position: relative;
     padding-left: 20px;
-  }
-
-.page-content li::before {
+}
+.page li::before {
     content: "";
     position: absolute;
     left: 2px;
     top: 8px;
     width: 6px;
     height: 6px;
-    background-color: var(--accent-color);
+    background-color: var(--pastel-magenta);
     border-radius: 50%;
-  }
-
-.game-description {
-    font-weight: 300;
-}
-
-.page-content a {
-    color: var(--accent-color);
-}
-
-.page-content a:hover {
-    /* QUALCOSA */
-    color: var(--accent-color);
 }
 
 .bottom-navbar {
-    justify-content: center;
+    text-align: center;
 }
-
