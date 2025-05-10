@@ -245,7 +245,7 @@ img, video {
     margin-top: .4rem;
 }
 
-.download-button {
+#download-button {
     display: inline-block;
     margin-top: 1.8rem;
     padding: .8rem 1.4rem;
