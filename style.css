@@ -1,6 +1,6 @@
 :root {
-    --text-color: black;
-    --background-color: white;
+    --primary-dark: black;
+    --primary-light: white;
     --pastel-magenta: #eecbff;
     --pastel-green: #d4ffea;
     --pastel-purple: #dbdcff;
@@ -16,7 +16,7 @@
 
 * {
     font-family: 'Lato', Helvetica, sans-serif;
-    color: var(--text-color);
+    color: var(--primary-dark);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -28,12 +28,17 @@
     margin: 4rem auto;
 }
 
-p {
+p, li {
+    font-weight: 300;
     line-height: 130%;
 }
 
 a {
+    font-family: inherit;
     text-decoration: none;
+}
+p a {
+    font-weight: 600;
 }
 
 img {
@@ -42,7 +47,7 @@ img {
     width: 100%;
 }
 img, video {
-    border: var(--border-width) solid var(--text-color);
+    border: var(--border-width) solid var(--primary-dark);
     border-radius: var(--border-radius)
 }
 
@@ -79,12 +84,12 @@ img, video {
 /* sections */
 
 .highlight-section {
-    border-top: var(--border-width) solid var(--text-color);
-    border-bottom: var(--border-width) solid var(--text-color);
+    border-top: var(--border-width) solid var(--primary-dark);
+    border-bottom: var(--border-width) solid var(--primary-dark);
 }
 
 .highlight-box {
-    border: var(--border-width) solid var(--text-color);
+    border: var(--border-width) solid var(--primary-dark);
     border-radius: var(--border-radius);
     padding: 2rem;
 }
@@ -97,7 +102,7 @@ img, video {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 1rem;
-    border-bottom: var(--border-width) solid var(--text-color);
+    border-bottom: var(--border-width) solid var(--primary-dark);
 }
 
 .header-text h1 {
@@ -145,7 +150,7 @@ img, video {
 }
 
 .grid-item {
-    border: var(--border-width) solid var(--text-color);
+    border: var(--border-width) solid var(--primary-dark);
     border-radius: var(--border-radius);
     padding: 1rem;
 }
@@ -154,16 +159,12 @@ img, video {
     padding: .8rem 0 .3rem;
 }
 
-.keyword + .keyword {
-    margin-left: .6rem;
-}
-
 .keyword {
     display: inline-block;
     font-size: .8rem;
     text-transform: uppercase;
     text-wrap: nowrap;
-    margin-top: 0.5rem;
+    margin: 0.6rem 0.6rem 0 0;
     padding: .3rem .4rem;
     border-radius: 4px;
 }
@@ -197,8 +198,8 @@ img, video {
     margin-top: 1.8rem;
     padding: .8rem 1.4rem;
     border-radius: 10px;
-    background-color: var(--text-color);
-    color: var(--background-color);
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
     font-size: 0.9rem;
     font-weight: 700;
 }
@@ -230,7 +231,7 @@ footer {
     font-size: 0.7rem;
     font-weight: 300;
     text-align: center;
-    border-top: var(--border-width) solid var(--text-color);
+    border-top: var(--border-width) solid var(--primary-dark);
     padding-top: 4rem;
 }
 
@@ -265,6 +266,23 @@ footer {
 
 .game-description {
     font-weight: 300;
+}
+
+.page .keyword {
+    margin: 1rem 1rem 0 0;
+    color: var(--primary-light);
+}
+.page .magenta .keyword {
+    background-color: var(--dark-magenta);
+}
+.page .green .keyword {
+    background-color: var(--dark-green);
+}
+.page .purple .keyword {
+    background-color: var(--dark-purple);
+}
+.page .yellow .keyword {
+    background-color: var(--dark-yellow);
 }
 
 .page ul {
@@ -392,5 +410,14 @@ footer {
     }
     .yellow a:hover::after {
         background-color: var(--dark-yellow);
+    }
+
+    /* others */
+    .grid-item img:hover, .contact-icon:hover {
+        filter: brightness(1.1) saturate(1.1);
+    }
+
+    #download-button:hover {
+        background-color: #303030;
     }
 }
