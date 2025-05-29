@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Flames</title> <!-- PAGE TITLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.png">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header content">
+
+        <div class="header-text">
+            <a href="index.html"><h1>Giulia Fanzaghi</h1></a>
+            <h4>Game Programmer</h4>
+        </div>
+
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html#games" class="nav-link games-link">Games</a></li>
+                <li><a href="index.html#about" class="nav-link about-link">About</a></li>
+                <li><a href="index.html#contact" class="nav-link contact-link">Contact</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <!-- fine header -->
+
+
+    <!-- PAGE CONTENT -->
+    <div class="page">
+
+        <section class="content">
+            <h1>Dark Flames</h1>
+
+            <div class="paragraph-with-image">
+                <img src="assets/images/dark-flames-01.png" alt="Dark Flames loading screen">
+
+                <div>
+                    <p class="game-description">Darkness has conquered everything. You must venture into the depths of the Forest of Sorrow in search of Cinders - the last fragments of the Primordial Flame, and your only hope to rekindle the light and restore warmth to a dying world.</p>
+                    <p class="game-description">The path ahead is ever unknown. You will risk both body and mind. With you, only a faint torch. A roll of the dice will determine your fate.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content highlight-box purple">
+            <p><strong>Dark Flames</strong> is a simple game developed by a two-person team <strong>in seven days</strong> for the <a href="https://itch.io/jam/1-bit-jam-wow" target="_blank">1-BIT JAM 2023</a> and released on itch.io as a free <strong>play-in-browser</strong> game.</p>
+            <p>Made with Unity and C#.</p>
+            <p>I coded everything except the shader (that looks very cool, I know.)</p>
+            <p>&#8594; Play <strong>Dark Flames</strong> <strong><a href="https://giuliafanzaghi.itch.io/dark-flames" target="_blank">here</a></strong></p>
+            <p>GitHub repo <strong><a href="https://github.com/wellenina/one-bit-jam" target="_blank">here</a></strong></p>
+
+            <span class="keyword">2023</span>
+            <span class="keyword">Unity</span>
+            <span class="keyword">C#</span>
+            <span class="keyword">3D</span>
+            <span class="keyword">Game jam</span>
+            <span class="keyword">Released on Itch.io</span>
+        </section>
+
+        <section class="paragraph-with-image content">
+            <div>
+                <h3>Notable features</h3>
+                <ul>
+                    <li>Use of Scriptable Objects for data management</li>
+                    <li>At the start of each run, a unique hero is randomly generated with a name and stats</li>
+                    <li>Every step along the way is a &#8220;room&#8221; that gets instantiated as the characters goes forward, and every run is a pseudorandom sequence of rooms</li>
+                </ul>
+            </div>
+
+            <video autoplay loop muted>
+                <source src="assets/videos/dark-flames-video.mp4" type="video/mp4">
+                Your browser does not support the video tag! Sorry!
+            </video>
+        </section>
+
+        <section class="highlight-section yellow">
+            <div class="paragraph-with-image content">
+                <video autoplay loop muted>
+                    <source src="assets/videos/dark-flames-dice.mp4" type="video/mp4">
+                    Your browser does not support the video tag! Sorry!
+                </video>
+    
+                <div class="highlight-paragraph">
+                    <h3>One thing I&#8217;m pretty proud of</h3>
+                    <p>I programmed a dice roll mechanic, with its 2D animation. The dice determines outcomes such as damage, resources, or special events.</p>
+                    <p>It&#8217;s actually just a 2D image of the dice faces, masked, and smoothly moved until it reaches the desired face, previously calculated. The image position had to be scaled based on the current resolution, otherwise the animation would break whenever the user resized the window.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content">
+            <img src="assets/images/dark-flames-02.png" alt="Dark Flames gameplay">
+        </section>
+    </div>
+    <!-- END PAGE CONTENT -->
+
+    <div class="bottom-navbar content">
+        <a href="index.html"><img src="assets/icons/back-btn.png" alt="Back" class="back-btn magenta"></a>
+    </div>
+
+    <footer class="content">
+        <p>And yes I also coded this small website from scratch because why not</p>
+    </footer>
+
+</body>
+</html>

@@ -33,12 +33,20 @@ p, li {
     line-height: 130%;
 }
 
+strong, em {
+    color: inherit;
+}
+
 a {
     font-family: inherit;
     text-decoration: none;
 }
 p a {
     font-weight: 600;
+}
+
+.caption {
+    font-weight: 400;
 }
 
 img {
@@ -67,16 +75,16 @@ img, video {
     background-color: var(--pastel-yellow);
 }
 
-.magenta a {
+.magenta a, .magenta .caption {
     color: var(--dark-magenta);
 }
-.green a {
+.green a, .green .caption {
     color: var(--dark-green);
 }
-.purple a {
+.purple a, .purple .caption {
     color: var(--dark-purple);
 }
-.yellow a {
+.yellow a, .yellow .caption {
     color: var(--dark-yellow);
 }
 

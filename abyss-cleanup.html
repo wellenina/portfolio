@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abyss Cleanup Adventure</title> <!-- PAGE TITLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.png">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header content">
+
+        <div class="header-text">
+            <a href="index.html"><h1>Giulia Fanzaghi</h1></a>
+            <h4>Game Programmer</h4>
+        </div>
+
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html#games" class="nav-link games-link">Games</a></li>
+                <li><a href="index.html#about" class="nav-link about-link">About</a></li>
+                <li><a href="index.html#contact" class="nav-link contact-link">Contact</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <!-- fine header -->
+
+
+    <!-- PAGE CONTENT -->
+    <div class="page">
+
+        <section class="content">
+            <h1>Abyss Cleanup Adventure</h1>
+            <img src="assets/images/abyss-cleanup-diver02.png" alt="Abyss Cleanup gameplay">
+        </section>
+
+        <section class="content highlight-box magenta">
+            <p><strong>Abyss Cleanup Adventure</strong> is the official video game for <a href="https://abysscleanup.com/" target="_blank">Abyss Cleanup</a>, a nonprofit organization dedicated to protecting the marine environment by focusing specifically on ocean cleanups and the removal of waste from seabeds.</p>
+            <p>This commitment comes alive in the game, where players join a small team and embark on <strong>underwater expeditions</strong> into various oceans and seas, actively participating in these crucial cleanup efforts by collecting debris and contributing to a healthier ocean.</p>
+            <p>Developed in <strong>Unity</strong> and <strong>C#</strong> between 2024 and 2025, it&#8217;s a 3D mobile game set to be released on Android in Q4 2025. I was the <strong>lead programmer</strong> on the project and handled all the programming stuff except for the graphics part.</p>
+            
+            <span class="keyword">2025</span>
+            <span class="keyword">Unity</span>
+            <span class="keyword">C#</span>
+            <span class="keyword">Lead programmer</span>
+            <span class="keyword">Mobile</span>
+            <span class="keyword">Android</span>
+        </section>
+
+        <section class="paragraph-with-image content">
+            <img src="assets/images/abyss-cleanup-dialogue.png" alt="Abyss Cleanup gameplay">
+
+            <div>
+                <h3>Main Game Features</h3>
+                <ul>
+                    <li>Multiple levels, divided into three distinct areas/categories, which unlock as the player accumulates score</li>
+                    <li>Levels where the player controls a human character (a diver), and levels set at greater underwater depths where they control an ROV or a submarine</li>
+                    <li>Collection of score-increasing items, a limited resource (oxygen or fuel) that depletes over time, damaging obstacles (that consume the resource), and underwater currents that can pull you along</li>
+                    <li>Dialogues between characters</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="paragraph-with-image content">
+            <div>
+                <h3>Technical Features</h3>
+                <ul>
+                    <li>Cinematic sequences created with Unity&#8217;s Timeline and adapted at runtime via code</li>
+                    <li>Local saves (score, user settings)</li>
+                    <li>Text localization, using Unity&#8217;s Localization system</li>
+                    <li>Integration with <strong>Google Play Services</strong> (sign-in, leaderboards)</li>
+                    <li>I also handled (not very well, admittedly) all the UI, sound effects, and background music</li>
+                </ul>
+            </div>
+
+            <img src="assets/images/abyss-cleanup-cinematic.png" alt="Abyss Cleanup gameplay">
+        </section>
+
+        <section class="highlight-section green">
+
+            <div class="paragraph-with-image content">
+                <img src="assets/images/abyss-cleanup-diver01.png" alt="Abyss Cleanup gameplay">
+
+                <div>
+                    <h3>One thing I&#8217;m pretty proud of</h3>
+                    <div>
+                        <p>I developed the <strong>character control system</strong> from scratch. Both environment and character models are 3D, while the character moves on a 2D plane. The player uses a virtual stick to guide them. Our main goal was to create a convincing feel of <strong>underwater movement</strong>, complete with its typical inertia and friction. I decided to use a kinematic approach: this means the character&#8217;s position is calculated each frame, rather than relying on the standard physics engine, which gave me more direct control and let us get the feel just right.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="paragraph-with-image content">
+                <div>
+                    <p>I worked on refining this system through a number of iterations. Character rotation and animations are handled independently from the actual displacement. To achieve a fluid, aquatic feel for the movement, I used Unity&#8217;s AnimationCurves for <strong>gradual acceleration and deceleration</strong>, both when the character starts moving or rotating, and when it stops. This also applied to changing direction: the character doesn&#8217;t just switch instantly but carries some momentum, continuing briefly in the original direction before smoothly transitioning to the new one.</p>
+                    <p class="caption">This video shows a <em>very early</em> prototype of the character rotation, using a <em>very temporary</em> placeholder.</p>
+                </div>
+
+                <video autoplay loop muted>
+                    <source src="assets/videos/abyss-cleanup-prototype.mp4" type="video/mp4">
+                    Your browser does not support the video tag! Sorry!
+                </video>
+            </div>
+
+            <div class="paragraph-with-image content">
+                <video autoplay loop muted>
+                    <source src="assets/videos/abyss-cleanup-movement-cropped.mp4" type="video/mp4">
+                    Your browser does not support the video tag! Sorry!
+                </video>
+
+                <div>
+                    <p>For <strong>collision handling</strong>, I used <strong>raycasts</strong> pointing in the direction of movement. Depending on the angle of impact with an obstacle, the character would either stop or be guided to <strong>slide along the surface</strong>.</p>
+                    <p>The same core movement logic is used for both the human diver and the underwater ROV, and has been adapted to give each one its own distinct feel by simply adjusting parameters visible in the Unity editor.</p>
+                    <p class="caption">This video shows diver and ROV movement, visually illustrating their speed, direction, collisions, and sliding.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="content">
+            <img src="assets/images/abyss-cleanup-rov.png" alt="Abyss Cleanup gameplay">
+        </section>
+
+    </div>
+    <!-- END PAGE CONTENT -->
+
+    <div class="bottom-navbar content">
+        <a href="index.html"><img src="assets/icons/back-btn.png" alt="Back" class="back-btn purple"></a>
+    </div>
+
+    <footer class="content">
+        <p>And yes I also coded this small website from scratch because why not</p>
+    </footer>
+
+</body>
+</html>
